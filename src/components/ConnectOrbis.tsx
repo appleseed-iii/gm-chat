@@ -61,7 +61,7 @@ export const ConnectOrbis = () => {
         </>
 			: signer ?
 				<button onClick={() => connect()}>Connect to say gm</button>
-			: <div>loading</div>
+			: <button onClick={() => connect()}>Connect to say gm</button>
       }
 
       <ChatBox orbis={orbis} resyncChat={resyncChat} setResyncChat={setResyncChat} />
