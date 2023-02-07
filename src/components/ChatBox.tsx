@@ -78,8 +78,8 @@ export const ChatBox = ({orbis, resyncChat, setResyncChat}: {orbis: any; resyncC
       {posts && posts.length > 0 && posts.map((post) => {
         return (
           <div key={post.stream_id}>
-            <p>{post.content.body} at {dateFromUnixTimestamp(post.timestamp)}</p>
-            <p>from: {post.creator_details.metadata.address}</p>
+            <p style={{color: "gray"}}>{post.creator_details.metadata.address} said:</p>
+            <p>{post.content.body}<span style={{color: "blue"}}> at {dateFromUnixTimestamp(post.timestamp)}</span></p>
             <hr />
           </div>
         )

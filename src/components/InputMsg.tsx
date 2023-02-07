@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const InputMsg = ({orbis, setResyncChat}: {orbis: any; setResyncChat: any;}) => {
+export const InputMsg = ({orbis, resyncChat, setResyncChat}: {orbis: any; resyncChat: boolean; setResyncChat: any;}) => {
   const [msg, setMsg] = useState<string>();
   const [orbisRes, setOrbisRes] = useState<{status: number; doc: string; result: string}>();
 
@@ -36,7 +36,7 @@ export const InputMsg = ({orbis, setResyncChat}: {orbis: any; setResyncChat: any
           <button>Submit</button>
         </div>
       </form>
-      {orbisRes && (
+      {orbisRes && resyncChat && (
         <div>
           <p>{orbisRes.status}</p>
           <p>{orbisRes.result}</p>

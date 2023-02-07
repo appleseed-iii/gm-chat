@@ -57,7 +57,7 @@ export const ConnectOrbis = () => {
           <p>Connected with: {user}</p>
           <button onClick={() => handleLogout()}>Logout</button>
           <h2>Say gm</h2>
-          <InputMsg orbis={orbis} setResyncChat={setResyncChat} />
+          <InputMsg orbis={orbis} resyncChat={resyncChat} setResyncChat={setResyncChat} />
         </>
 			: signer ?
 				<button onClick={() => connect()}>Connect to say gm</button>
