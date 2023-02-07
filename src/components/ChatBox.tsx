@@ -73,7 +73,7 @@ export const ChatBox = ({orbis, resyncChat, setResyncChat}: {orbis: any; resyncC
 
   return (
     <>
-      <h2>gm's:</h2>
+      <h2>{`gm's:`}</h2>
       {resyncChat && (<p>... resyncing ...</p>)}
       {posts && posts.length > 0 && posts.map((post) => {
         return (
